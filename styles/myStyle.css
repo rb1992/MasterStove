@@ -1,0 +1,282 @@
+﻿body {
+    background-color: #c22048;
+}
+
+#container {
+    background-color: white;
+    padding: 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+    #container * {
+        font-family: Arimo;
+        font-size: 14pt;
+    }
+
+    h2,h3{
+        font-weight:bold;
+    }
+
+.glyphicon {
+    font-family: 'Glyphicons Halflings' !important;
+}
+
+.fa {
+    font-family: 'FontAwesome' !important;
+}
+
+#MainNav {
+    height: 50px;
+    padding: 0;
+}
+
+    #MainNav ul {
+        background-color: #000000;
+        display: table;
+        width: 100%;
+        table-layout: fixed;
+        padding: 0 5%;
+        margin: 0;
+        border-bottom: 10px solid #c22048;
+    }
+
+        #MainNav ul li {
+            display: table-cell;
+            float: none;
+            width: 100%;
+            text-align: center;
+        }
+
+            #MainNav ul li:nth-child(1) {
+                box-shadow: -8px 0px 0px 0px #c22048;
+            }
+
+            #MainNav ul li:last-child {
+                box-shadow: 8px 0px 0px 0px #c22048;
+            }
+
+            #MainNav ul li a {
+                display: block;
+                color: white;
+                text-decoration: none;
+                height: 50px;
+                width: auto;
+                font-size: 12pt;
+            }
+
+            #MainNav ul li a:hover, #MainNav ul li a:active {
+                background-color: #C22048;
+                color: white;
+                letter-spacing: 1px;
+            }
+
+
+            #MainNav ul li.active a {
+                background-color: #C22048;
+                color: white;
+                font-weight: bold;
+                letter-spacing: 1px;
+            }
+
+
+
+
+#logo {
+    margin-bottom: 15px;
+    padding-top: 60px;
+    color: black;
+    text-align: center;
+}
+
+    #logo * {
+        margin: 0;
+    }
+
+    #logo img {
+        height: 161px;
+    }
+
+    #logo h1 {
+        font-size: 31pt;
+        font-weight: bold;
+    }
+
+    #logo p {
+        font-size: 17pt;
+    }
+
+#HomePage #hamburger {
+    position: absolute;
+    font-size: 30px;
+    margin: 10px;
+}
+
+    #HomePage #hamburger:hover ul {
+        display: block;
+        position: absolute;
+        list-style: none;
+        padding: 0;
+    }
+
+        #HomePage #hamburger:hover ul a {
+            display: block;
+            width: 200px;
+            height: 30px;
+            border-bottom: 0.3px solid black;
+            text-align: center;
+            text-decoration: none;
+        }
+
+
+
+#TagLineCircle .TagLineEx {
+    display: inline-block;
+    text-align: center;
+}
+
+    #TagLineCircle .TagLineEx div {
+        margin: 0px auto;
+        background-repeat: no-repeat;
+        height: 200px;
+        background-position: left;
+    }
+
+    #TagLineCircle .TagLineEx .circle {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        color: #fff;
+        border: 2px solid #c22048;
+        line-height: 500px;
+        text-align: center;
+        display: inline-block;
+    }
+
+        #TagLineCircle .TagLineEx .circle #cook {
+            background-image: url(../Images/stoveIcon.svg);
+            width: 115px;
+            background-size: 233px;
+        }
+
+        #TagLineCircle .TagLineEx .circle:hover #cook {
+            background-position: -116px;
+        }
+
+        #TagLineCircle .TagLineEx .circle #Share {
+            background-image: url('../Images/SocialShareIcon.svg');
+            width: 164px;
+            background-size: 338px;
+        }
+
+        #TagLineCircle .TagLineEx .circle:hover #Share {
+            background-position: -170px;
+        }
+
+        #TagLineCircle .TagLineEx .circle #GetBetter {
+            background-image: url(../Images/GetBetter.svg);
+            background-size: 450px;
+            background-position: -22px;
+        }
+
+        #TagLineCircle .TagLineEx .circle:hover #GetBetter {
+            background-position: -246px;
+        }
+
+
+        #TagLineCircle .TagLineEx .circle p {
+            display: inline;
+        }
+
+#ContinueScroll {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+    #ContinueScroll p {
+        padding-top:10px;
+        font-weight:bold;
+            margin: 0;
+    }
+
+    #ContinueScroll i {
+        font-size: 27pt;
+        color: #c22048;
+    }
+
+section {
+    min-height: 750px;
+    padding: 60px 5% 0 5%;
+    text-align: justify;
+}
+
+    section:nth-child(odd) {
+        background-color: rgba(92, 92, 95, 0.02);
+        border-top: 1px solid rgba(163, 163, 163, 0.14);
+        border-bottom: 1px solid rgba(163, 163, 163, 0.14);
+    }
+
+    section h2 {
+        text-align: center;
+        padding: 15px;
+        font-size: 18pt !important;
+    }
+    section p{
+         padding-bottom:30px;
+    }
+
+
+
+
+    /*form*/
+#container form * {
+    font-size: 11pt;
+    font-weight: normal;
+}
+
+.form-control:focus {
+    border-color: #c22048;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(194, 32, 72, .5);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(194, 32, 72, 0.5);
+}
+
+#container form label ,#container form input[type="submit"] {
+    font-size: 12pt;
+    font-weight: bold;
+}
+
+#container form input[type="submit"]{
+    margin-bottom:20px;
+}
+
+textarea {
+    resize: none;
+    height:120px !important;
+}
+
+#ajaxLoaderDiv img{
+    width:65px;
+}
+
+#googleMap{
+    height:350px;
+    margin-bottom:20px;
+
+}
+
+
+@media (max-width: 991px) {
+    
+
+    #MainNav ul li a {
+        font-size: 11pt;
+    }
+}
+
+@media (max-width: 767px){
+
+    #logo {
+        padding-top: 5px;
+    }
+}
