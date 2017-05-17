@@ -12,7 +12,7 @@ function initialize() {
     };
 
     var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
-    var myIcon = '../Images/googleMarker.png';
+    var myIcon = 'Images/googleMarker.png';
 
     var marker = new google.maps.Marker({
         position: myCenter,
