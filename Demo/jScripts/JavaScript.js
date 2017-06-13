@@ -433,17 +433,57 @@ $(document).ready(function () {
 
     });
 
+    $(".fa-microphone").click(function () {
+        // Start listening. You can call this here, or attach this call to an event, button, etc.
+        annyang.start();
+        $(this).css("color", "#c22048");
+    });
+
     //הפעלה באמצעות קול
     annyangRec();
     function annyangRec() {
         if (annyang) {
 
             var TurnOn = function () {
-                alert("on");
+                $(".Func").removeClass("active");
+                $("#Func1").addClass("active");
+                console.log("on");
+
+                annyang.pause();
+                $(".fa-microphone").css("color", "black");
+                setTimeout(function () {
+                    TimeLeft = 0;
+                    $("#OvenSetup").toggle();
+                    $("label[for=TimeInput]").hide();
+                    EnterFoodSteps();
+                }, 2000);
+                
+
             }
 
             var TurnOff = function () {
-                alert("off");
+
+                $(".Func").removeClass("active");
+                $("#Func11").addClass("active");
+
+                FoodName = "";
+                TimeLeft = 0;
+                OvenTemp = 0;
+                FoodSteps = [];
+
+                $("#FoodName").html("");
+                $("#HomeFoodName").html("");
+                var FoodNameInput = document.getElementById("FoodNameInput");
+                FoodNameInput.value = "";
+
+                $("#HomeOvenTimeLeft").html("");
+                $("#OvenTimeLeft").html("");
+                $("#HomeOvenTemp").html("");
+                EnterFoodSteps();
+                console.log("off");
+
+                annyang.pause();
+                $(".fa-microphone").css("color", "black");
             }
 
             var commands = {
@@ -454,8 +494,8 @@ $(document).ready(function () {
             annyang.addCommands(commands);
 
             annyang.debug(true);
-            // Start listening. You can call this here, or attach this call to an event, button, etc.
-            annyang.start();
+
+           
         }
     }
 
