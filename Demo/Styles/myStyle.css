@@ -1001,3 +1001,30 @@ width: 200px;
     width:100px;
         margin: 12px 0;
 }
+
+#Alert {
+    top: -37px;
+    left: 0;
+    width: 331px;
+    height: 128px;
+    text-align: center;
+    padding: 10px;
+}
+#Alert .fa{
+    font-size:30pt;
+}
+#Alert h2{
+   display:inline-block;
+}
+    #Alert p {
+        margin-top: 10px;
+    }
+
+#CloseOven {
+    width: 100px;
+    position: absolute;
+    bottom: 10px;
+    left: 111px;
+    background-color: #c22048;
+}
+

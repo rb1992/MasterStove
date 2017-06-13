@@ -1,5 +1,7 @@
 $(document).ready(function () {
 
+    var audioElement = document.createElement('audio');
+    audioElement.setAttribute('src', 'Sounds/AlertSound.mp3');
 
     //הצגת תאריך ושעה במסך הראשי
     var dt = new Date();
@@ -134,8 +136,8 @@ $(document).ready(function () {
             $("#OvenTemp").html(OvenTemp + "\u00b0");
             $("#HomeOvenTemp").html(OvenTemp + "\u00b0");
             if (TimeLeft != 0) {
-                $("#HomeOvenTimeLeft").html("Time left: " + TimeLeft + " Minuts");
-                $("#OvenTimeLeft").html("Time left: " + TimeLeft + " Minuts");
+                $("#HomeOvenTimeLeft").html("Time left: " + TimeLeft + " Minutes");
+                $("#OvenTimeLeft").html("Time left: " + TimeLeft + " Minutes");
             }
             else {
                 $("#HomeOvenTimeLeft").html("");
@@ -143,14 +145,41 @@ $(document).ready(function () {
             }
         }
 
-        if (FoodName == "cake") {
+        if (FoodName == "Cake") {
             setTimeout(explode, 10000);
         }
     });
 
     function explode() {
-        alert("Boom!");
+        audioElement.play();
+        $("#Alert").show();
     }
+
+    $("#CloseOven").click(function () {
+        audioElement.pause();
+        $("#firstTime").hide();
+        $("#Alert").hide();
+        $("#appScreen").show();
+
+        $("#demo").dragend({ scrollToPage: 3 });
+        $(".Func").removeClass("active");
+        $("#Func11").addClass("active");
+
+        FoodName="";
+        TimeLeft = 0;
+        OvenTemp = 0;
+        FoodSteps = [];
+
+        $("#FoodName").html("");
+        $("#HomeFoodName").html("");
+        var FoodNameInput = document.getElementById("FoodNameInput");
+        FoodNameInput.value = "";
+
+        $("#HomeOvenTimeLeft").html("");
+        $("#OvenTimeLeft").html("");
+        $("#HomeOvenTemp").html("");
+        EnterFoodSteps();
+    });
 
 
     $("#TimeLimit i").click(function () {
@@ -215,7 +244,7 @@ $(document).ready(function () {
         $("#FoodSteps ol").html("");
         for (var i = 0; i < FoodSteps.length; i++) {
             if (FoodSteps[i][0] != 0) {
-                $("#FoodSteps ol").append("<i id='trash" + i + "' class='fa fa-trash' aria-hidden='true'></i><li>" + FoodSteps[i][0] + " Minuts " + FoodSteps[i][1] + "\u00b0</li>");
+                $("#FoodSteps ol").append("<i id='trash" + i + "' class='fa fa-trash' aria-hidden='true'></i><li>" + FoodSteps[i][0] + " Minutes " + FoodSteps[i][1] + "\u00b0</li>");
             }
             else {
                 $("#FoodSteps ol").append("<i id='trash" + i + "' class='fa fa-trash' aria-hidden='true'></i><li>" + FoodSteps[i][1] + "\u00b0</li>");
@@ -223,12 +252,11 @@ $(document).ready(function () {
             TimeLeft += Number(FoodSteps[i][0]);
         }
 
-        console.log(FoodSteps.length);
         if (FoodSteps.length != 0) {
             OvenTemp = FoodSteps[0][1];
             $("#OvenTemp").html(OvenTemp + "\u00b0");
             if (TimeLeft != 0) {
-                $("#OvenTimeLeft").html("Time left: " + TimeLeft + " Minuts");
+                $("#OvenTimeLeft").html("Time left: " + TimeLeft + " Minutes");
             }
             else {
                 $("#OvenTimeLeft").html("");
