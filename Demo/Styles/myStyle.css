@@ -1,0 +1,1003 @@
+body {
+    direction: ltr;
+    font-family:Arial !important;
+}
+
+#container {
+    width: 454px;
+    height: 644px;
+    background-image: url(../Images/smartphone-call.svg), url(../Images/PhoneBG.jpg);
+    background-size: 725px, 378px;
+    background-position: -137px -1px, 25px 58px;
+    margin: auto auto;
+    background-repeat: no-repeat;
+    position: relative;
+}
+    #container #StatusLine {
+        position: absolute;
+        width: 354px;
+        height: 31px;
+        background-color: #0b0b0b;
+        background-image: url(../Images/statusBar.png);
+        background-size: 318px;
+        background-repeat: no-repeat;
+        background-position: -2px 3px;
+        top: 77px;
+        left: 49px;
+    }
+        #container #StatusLine .CurrentTime {
+            position: absolute;
+            color: #bcbcbc;
+            direction: rtl;
+            width: 348px;
+            top: 6.5px;
+            font-size: 10pt;
+        }
+    #container #controlButton {
+    background-image: url(../Images/controlButton.png);
+    width: 354px;
+    height: 31px;
+    position: absolute;
+    background-size: 357px;
+    background-repeat: no-repeat;
+    left: 49px;
+    bottom: 6px;
+    }
+
+#back {
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    position: absolute;
+    left: 61px;
+}
+
+#phoneScreen {
+ bottom: 53px;
+    left: 50px;
+    position: absolute;
+}
+#googleSearch {
+    width: 300px;
+    height: 36px;
+    background-image: url(../Images/google.png);
+    background-size: 300px;
+    margin-bottom: 72px;
+    -webkit-box-shadow: 1px 1px 10px 1px #000000;
+    box-shadow: 1px 1px 10px 1px #000000;
+    border-radius: 4px;
+    margin: 0 auto 26px auto;
+}
+#timeAndDate {
+    width: 150px;
+    height: 64px;
+    text-align: center;
+    margin: 0 auto 26px auto;
+    color: white;
+    font-size: 9pt;
+    line-height: 35px;
+    padding: 15px 0;
+}
+#timeAndDate .CurrentTime {
+      font-size: 35pt;
+}
+#dots{
+    text-align:center;
+padding: 14px 0;
+}
+.dot{
+width: 10px;
+    height: 10px;
+     -webkit-box-shadow: 1px 1px 10px 1px #000000;
+    box-shadow: 1px 1px 10px 1px #000000;
+    border-radius: 50%;
+    background-color:rgba(255,255,255,0.7);
+    display:inline-block;
+}
+.dot.active{
+    width:12px;
+    height:12px;
+    background-color:white;
+}
+#BottomPhoneIcon {
+    width: 352px;
+    text-align: center;
+}
+.Icon{
+    width: 44px;
+    height: 44px;
+    background-size: 45px;
+    background-repeat: no-repeat;
+    -webkit-box-shadow: 1px 1px 10px 1px #000000;
+    box-shadow: 1px 1px 10px 1px #000000;
+    border-radius: 11px;
+    display: inline-block;
+    margin: 0 11px;
+}
+.middllePhoneIcon{
+    margin-bottom:7px;
+}
+    .middllePhoneIcon .appMName {
+        font-size: 8pt;
+        text-align: center;
+        color: white;
+        padding-top: 47px;
+        width: 66px;
+        margin: 0 -12px;
+    }
+    .middllePhoneIcon .Icon {
+        width: 44px;
+        height: 44px;
+        margin: 9px 34px;
+    }
+
+
+
+#camara{
+    background-image: url('../Images/camara.png');
+}
+#gallery {
+    background-image: url('../Images/gallery.png');
+}
+#MasterStove {
+    background-image: url('../Images/MasterStove.png');
+}
+#googleFolder {
+    background-image: url('../Images/googleFolder.png');
+}
+#googlePlay {
+    background-image: url('../Images/googlePlay.png');
+}
+#settings {
+    background-image: url('../Images/settings.png');
+}
+#phone {
+    background-image: url('../Images/Phone.png');
+}
+#messages{
+    background-image: url('../Images/messages.png');
+}
+#allApps{
+    background-image: url('../Images/allApps.png');
+    border-radius: 22px;
+}
+#people{
+    background-image: url('../Images/people.png');
+}
+#chrome{
+    background-image: url('../Images/chrome.png');
+    border-radius: 22px;
+}
+#container #appScreen{
+display: none;
+}
+
+
+    #container #appScreen #demo , #container #appScreen #appTop {
+        left: 49px;
+        top: 108px; 
+         position: absolute;
+        background-color:white;
+        width: 352px;
+        height: 499px;
+      
+    }
+
+#container #appScreen #demo {
+    top: 180px;
+    height: 438px;
+    position:relative;
+}
+.dragend-page{
+    overflow:hidden !important;
+}
+#container #appScreen #appTop {
+    height: 70px;
+    z-index: 1;
+    border-bottom:2px solid black;
+}
+        #container #appScreen #appTop #menu li {
+    text-align: center;
+    display: inline-block;
+    padding: 4px 11px;
+    cursor: pointer;
+    float: left;
+    position:relative;
+        }
+            #container #appScreen #appTop #menu li.active {
+                color: #c22048;
+            }
+            li.active span{
+                display:inline;
+            }
+            li.active span{
+    float: left;
+    display: inline-block;
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    border-bottom: 7px solid #c22048;
+    box-sizing: border-box;
+    top: 23px;
+    left: -13px;
+            }
+li:last-child span {
+ width: 122%;
+}
+
+li:first-child span {
+ left: 0px;
+ width:73px;
+}
+#humburger{
+     cursor:pointer;
+}
+#humburger:hover{
+     color:darkslategrey;
+}
+#humburgerMenu {
+    position: absolute;
+    width: 130px;
+    height: 261px;
+    background-color: white;
+    z-index: 2;
+    top: 0px;
+    left: 0px;
+    -webkit-box-shadow: 1px 1px 10px 1px #000000;
+    box-shadow: 0px 0px 9px 0px #000000;
+}
+#humburgerMenu li{
+    padding:5px;
+    padding-left:10px;
+    cursor:pointer;
+    list-style:none;
+}
+
+
+#humburgerMenu li span{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    padding-right: 10px;
+    background-repeat: no-repeat;
+    background-size: 14px;
+}
+.fa-Stove-top {
+    background-image: url('../Images/stove_top.svg');
+}
+.fa-Oven {
+    background-image: url('../Images/oven.svg');
+}
+
+#humburgerMenu li:hover .fa-Stove-top {
+    background-image: url('../Images/stove_top_hover.svg');
+}
+#humburgerMenu li:hover .fa-Oven {
+    background-image: url('../Images/oven_hover.svg');
+}
+li[data-page="humburgerSetting"]{
+    margin-top:20px;
+        border-top: 1px solid lightgray;
+}
+            #container #appScreen #appTop #menu li:after {
+                content: "|";
+                padding-left: 17px;
+                color:black;
+            }
+            #container #appScreen #appTop #menu li:last-child:after {
+                content: "";
+            }
+
+            #humburgerMenu{
+                display:none;
+            }
+
+            #appStatus{
+                border-bottom:2px solid black;
+                padding:7px;
+            }
+            #MasterStoveName{
+               float:right;
+               font-weight:bold;
+            }
+
+            .fa{
+                font-size:15pt;
+                padding-right:10px;
+            }
+
+            #menu li:hover , #humburgerMenu li:hover{
+                color: #c22048;
+            }
+
+.humburgerPage {
+    width: 331px;
+    height: 465px;
+    position: absolute;
+    top: 119px;
+    left: 58px;
+    z-index: 3;
+    background-color: white;
+    -webkit-box-shadow: 1px 1px 10px 1px #000000;
+    box-shadow: 0px 0px 9px 0px #000000;
+    display:none;
+}
+
+.fa-window-close{
+    margin-top:5px;
+    font-size:15pt;
+    position:absolute;
+    color: #c22048;
+    right:0;
+}
+
+
+
+#ovenFunc{
+    margin-top:20px;
+}
+#ovenFunc span{
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 30px;
+    height: 32px;
+    background-size: 30px;
+    margin: 5px 12px;
+}
+
+#ovenFunc  .active{
+padding-bottom: 3px;
+    border-bottom: 3px solid #cc2184;
+}
+#Func1  , #DFuncImage1{
+    background-image: url('../Images/OvenFunc/1.PNG');
+}
+#Func2 , #DFuncImage2 {
+    background-image: url('../Images/OvenFunc/2.PNG');
+}
+#Func3 , #DFuncImage3 {
+    background-image: url('../Images/OvenFunc/3.PNG');
+}
+#Func4 , #DFuncImage4 {
+    background-image: url('../Images/OvenFunc/4.PNG');
+}
+#Func5 , #DFuncImage5 {
+    background-image: url('../Images/OvenFunc/5.PNG');
+}
+#Func6 , #DFuncImage6 {
+    background-image: url('../Images/OvenFunc/6.PNG');
+}
+#Func7 , #DFuncImage7 {
+    background-image: url('../Images/OvenFunc/7.PNG');
+}
+#Func8 , #DFuncImage8 {
+    background-image: url('../Images/OvenFunc/8.PNG');
+}
+#Func9 , #DFuncImage9 {
+    background-image: url('../Images/OvenFunc/9.PNG');
+}
+#Func10 , #DFuncImage10 {
+    background-image: url('../Images/OvenFunc/10.PNG');
+}
+#Func11 , #DFuncImage11 {
+    background-image: url('../Images/OvenFunc/11.PNG');
+}
+#Func12 , #DFuncImage12 {
+    background-image: url('../Images/OvenFunc/12.PNG');
+}
+
+#FuncDetails{
+    width: 331px;
+    height: 300px;
+    position: relative;
+    top: -101px;
+    left: 11px;
+    background-color: white;
+    -webkit-box-shadow: 1px 1px 10px 1px #000000;
+    box-shadow: 0px 0px 9px 0px #000000;
+    display: none;
+}
+
+#FuncDetails div {
+    display:none;
+}
+#FuncDetails div h3 {
+    text-align: center;
+    padding: 25px 0 7px 0;
+    padding-left: 16px;
+    font-weight: bold;
+}
+#FuncDetails div p:nth-child(2){
+    text-align:center;
+} 
+#FuncDetails div p{
+width: 300px;
+    margin: 5px auto;
+    font-size: 11.2pt;
+} 
+ #FuncDetails div span{
+    display: inline-block;
+    width: 30px;
+    height: 32px;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    position: absolute;
+    margin-left: -35px;
+    margin-top: -4px;
+ }
+#changeFunc{
+    margin: 20px auto;
+        width: 180px;
+}
+
+#GetImage , #OvenSetup{
+    width: 327px;
+    height: 376px;
+    position: relative;
+    bottom: 305px;
+    left: 12px;
+    background-color: white;
+    -webkit-box-shadow: 1px 1px 10px 1px #000000;
+    box-shadow: 0px 0px 9px 0px #000000;
+    display: none;
+
+}
+
+    #GetImage #placeHolder {
+    width: 150px;
+    height: 150px;
+        margin-left: 88px;
+    margin-top: 45px;
+    background-image: url(../Images/OvenPic.png);
+    }
+
+.btn {
+    display: block;
+    width: 57px;
+    height: 24px;
+    background-color: #000000;
+    text-align: center;
+    padding: 4px;
+    color: white;
+}
+#OvenDetails{
+    width: 324px;
+    margin: 10px auto;
+    height: 140px;
+    border: 1px solid black;
+    font-size:14pt;
+    text-align:center;
+}
+#OvenDetails #FoodName{
+    font-weight:bold;
+    margin-top:10px;
+}
+
+
+#FoodSteps ol{
+    margin-top: 15px;
+    margin-left: 84px;
+}
+
+#FoodSteps ol li:nth-child(2){
+    border: 2px solid #c22048;
+    width: 120px;
+    padding-left: 9px;
+}
+#StepControl{
+    display:none;
+    border-top:2px solid lightgrey;
+     border-bottom:2px solid lightgrey;
+     height:120px;
+    width: 259px;
+}
+#TimeLimit {
+    width: 251px;
+    text-align: center;
+    margin-top: 10px;
+}
+.fa-toggle-off , .fa-toggle-on{
+    font-size:20pt;
+    color: #c22048;
+}
+#HeatLevelInput , #TimeInput , #stoveTimeInput {
+    width: 50px;
+    height: 23px;
+    font-size: 13pt;
+    display: inline-block;
+}
+#TimeInput{
+   
+     width: 40px;
+}
+label[for=HeatLevelInput]
+{
+      margin-top: -5px;
+    
+}
+label[for=TimeInput]{
+     width: 160px;
+    margin-top:10px;
+       display:none;
+}
+.temp{
+    font-size:22pt;
+}
+#AddStep {
+    width: 60px;
+    height: 18px;
+    font-size: 10pt;
+    margin: 10px auto;
+    background-color: #c22048;
+}
+.fa-trash{
+position: absolute;
+    left: 40px;
+    cursor:pointer;
+}
+#OvenSetupBtn , #GetImageBtn{
+    width: 154px;
+    display: inline-block;
+    left: 13px;
+    top: -10px;
+    position: relative;
+}
+
+#GetImageBtn {
+        left: 11px;
+}
+#Share{
+width: 127px;
+    bottom: 16px;
+    left: 85px;
+    text-align: center;
+    background-color: #050582;
+    display:none;
+}
+#GetImage .btn{
+        -webkit-box-shadow: 1px 1px 10px 1px #000000;
+    box-shadow: 0px 0px 9px 0px #000000;
+    margin:4px;
+    position:absolute;
+}
+#GetImage h3 , #OvenSetup h3 , #stoveTopSetup h3{
+      text-align: center;
+    padding: 23px 0;
+}
+
+#ImageTop{
+  left: 120px;
+    top: 70px;
+}
+#ImageFront{
+    left: 120px;
+    top: 270px;
+}
+#ImageLeft{
+    top: 165px;
+    left: 5px;
+    float: left;
+}
+#ImageRight{
+   float: right;
+    top: 165px;
+    right: 5px;
+}
+
+label {
+    display: inline-block;
+    width: 300px;
+    margin: -10px 39px;
+}
+
+input{
+    display:block;
+}
+#AddLevel {
+    margin-left: 40px;
+    margin-top: 7px;
+}
+
+#OK{
+    position: absolute;
+    bottom: 10px;
+    left: 128px;
+}
+
+
+
+#stoveTop {  
+    border: 1px solid black;
+    width: 300px;
+    height: 300px;
+    margin: 30px auto;
+    list-style: none;
+    background-color: #a9a5a5;
+}
+    #stoveTop li {
+        display: inline-block;
+        width: 140px;
+        height: 140px;
+        border: 1px solid black;
+        background-image: url(../Images/stoveTopGas.svg);
+        background-repeat: no-repeat;
+        background-size: 68px;
+        background-position: center;
+            position: relative;
+            background-color: white;
+    }
+        #stoveTop li span {
+            font-family: Arial;
+            width: 54px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            position: absolute;
+            left: 56px;
+            top: 14px;
+            white-space: nowrap;
+        }
+#stoveTop .Top {
+    margin-top: 5px;
+}
+
+#stoveTop .Left {
+    margin-left: 5px;
+}
+
+#stoveTopSetup {
+    width: 331px;
+    height: 307px;
+    position: relative;
+    top: -340px;
+    left: 11px;
+    background-color: white;
+    -webkit-box-shadow: 1px 1px 10px 1px #000000;
+    box-shadow: 0px 0px 9px 0px #000000;
+    display: none;
+}
+
+i.fa.fa-pencil {
+    position: absolute;
+    left: 31px;
+    top: 15px;
+}
+label[for="stoveHeatLevelInput"]{
+    margin-top:5px;
+}
+
+label[for="stoveHeatLevelInput"] span:nth-child(2){
+    margin-left: -13px;
+}
+
+label[for="stoveHeatLevelInput"] span:nth-child(3){
+    margin: 0 66px;
+}
+
+#stoveHeatLevelInput {
+    width: 233px;
+}
+
+#StoveTopOK{
+        position: absolute;
+    bottom: 10px;
+    left: 128px;
+}
+
+#stoveTimeInput{
+   
+     width: 40px;
+}
+
+label[for=stoveTimeInput] {
+    width: 160px;
+    margin-top: 15px;
+    display: none;
+    margin-left: 93px;
+}
+
+#stoveTimeLimit {
+    width: 331px;
+    text-align: center;
+    margin-top: 23px;
+}
+
+#stoveTopSetupShowPlace {
+    border: 1px solid black;
+    width: 32px;
+    height: 32px;
+    margin: 1px auto;
+    list-style: none;
+    position: absolute;
+    top: 17px;
+    right: 65px;
+}
+#stoveTopSetupShowPlace li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    background-image: url(../Images/stoveTopGas.svg);
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: center;
+    margin: 2px;
+    float: left;
+}
+
+    #stoveTopSetup h3{
+            width: 301px;
+    }
+
+.noEmptyIcons {
+    position: absolute;
+    top: 4px;
+    right: -6px;
+    color: red;
+}
+
+
+#TipsPage {
+    text-align: center;
+    height: 441px;
+    overflow: scroll;
+}
+
+#tipsTitle {
+    position: fixed;
+    width: 336px;
+    background-color: white;
+}
+#TipsPage ul {
+    margin-top: 77px;
+}
+#TipsPage ul li {
+    height: 215px;
+    padding: 42px 13px 33px 15px;
+    text-align: left;
+    list-style: none;
+    border-bottom: 2px solid rgba(211, 211, 211, 0.18);
+    background-size: 93px;
+    background-repeat: no-repeat;
+}
+    #TipsPage ul li:nth-child(1) {
+        background-image: url('../Images/LowPan.png');
+        background-position: center 244px;
+    }
+
+    #TipsPage ul li:nth-child(2) {
+        background-image: url('../Images/Water.png');
+        background-position: center 181px;
+    }
+
+    #TipsPage ul li:nth-child(3) {
+        background-image: url('../Images/Chicken.png');
+            background-position: center bottom;
+    }
+
+
+#TipsPage .fa-lightbulb-o {
+    font-size: 43pt;
+    margin-top: 10px;
+        padding: 0;
+}
+
+    #TipsPage h2 {
+        font-size:18pt;
+        font-weight:bold;
+    }
+
+
+
+
+
+
+
+#HomePage #stoveTop {
+    width: 305px;
+    height: 223px;
+    margin: 16px auto;
+        background-color: #a9a5a5;
+}
+
+
+#HomePage li {
+    height: 102px;
+    width: 143px;
+    background-size: 45px;
+    font-size: 12pt;
+    background-position-y: 38px;
+     
+}
+
+    #HomePage li span {
+        width: 130px;
+        text-align: center;
+        left: 6px;
+    }
+
+#HomePage #OvenDetails {
+    width: 305px;
+    height: 172px;
+    margin: -17px auto;
+        background-color: rgba(169, 169, 169, 0.16);
+}
+
+#OvenDetails #HomeFoodName {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#HomeOvenDetails {
+    width: 264px;
+    height: 120px;
+    border: 1px solid black;
+    margin: 20px auto;
+    padding-top: 8px;
+    background-color:white;
+}
+
+
+
+
+
+
+
+
+
+
+
+#firstTime {
+    width: 353px;
+    height: 500px;
+    background-color: white;
+    top: 107px;
+    position: absolute;
+    z-index: 100;
+    left: 49px;
+}
+#dragendFirstTime {
+    width: 353px;
+    height: 373px;
+    position: absolute;
+    top: 43px;
+    z-index: -1;
+}
+
+#firstTime .dot {
+    background-color: #000000;
+    -webkit-box-shadow: 1px 1px 10px 1px #ffffff;
+    box-shadow: 3px 2px 10px 3px rgba(0, 0, 0, 0.13);
+}
+   #firstTime #dots {
+    position: absolute;
+    bottom: 40px;
+    left: 143px;
+    display:none;
+}
+
+   #firstTime .dot.active{
+       width:14px;
+       height:14px;
+   }
+
+img#logo {
+    width: 142px;
+    margin: 86px 105px -15px 105px;
+}
+
+#page1 {
+    background-color: white;
+    height: 500px;
+}
+
+#page1 h1{
+    text-align:center;
+    font-weight:bold;
+    font-size:25pt;
+}
+
+#page1 p{
+    text-align:center;
+    font-size:15pt;
+}
+
+#GetStarted {
+    width: 120px;
+    margin: 29px auto;
+}
+
+.skip {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 20px;
+    padding-right: 15px;
+}
+#about img {
+    width: 51px;
+    display: inline-block;
+    margin-left: 59px;
+    transform: rotate(-24deg);
+    vertical-align: bottom;
+        margin-top: 14px;
+}
+
+
+#about h1 {
+    font-weight: bold;
+    display: inline-block;
+    margin: 4px -22px;
+    font-size: 15pt;
+}
+
+#about p {
+    font-weight: bold;
+    display: inline-block;
+    font-size: 13pt;
+    margin-top: 38px;
+    padding-bottom: 0;
+    margin-left: 65px;
+}
+
+#about ul {
+    margin-left: 31px;
+    margin-top: 6px;
+}
+#about span {
+    background-size: 40px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    padding: 0;
+    margin-left: 57px;
+    margin-top: 40px;
+}
+
+.fa-shareIcon{
+    background-image:url("../Images/shareIcon.png")
+}
+
+.Firstdragend-page *{
+    padding:0 10px;
+}
+
+.Capture {
+        width: 244px;
+    margin: 8px 30px;
+}
+.AboutCapture p {
+    width: 305px;
+    margin-top: 18px;
+    text-align: justify;
+    margin: 9px auto;
+}
+.AboutCapture strong{
+    padding:0;
+}
+
+#HomePageAbout .Capture {
+width: 200px;
+    margin: 8px 54px;
+}
+
+#ShareAbout .Capture {
+    margin: -4px 34px;
+}
+
+
+#AboutTheAppWindows {
+    margin: 80px 52px;
+    text-align: center;
+}
+#AboutTheAppWindows h1 {
+    font-size:19pt;
+    font-weight:bold;
+}
+#AboutTheAppWindows p {
+    font-size:12pt;
+   
+}
+#AboutTheAppWindows img{
+    width:100px;
+        margin: 12px 0;
+}

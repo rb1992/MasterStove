@@ -1,0 +1,340 @@
+﻿<!doctype html>
+<html lang="">
+<head>
+    <meta charset="utf-8" />
+    <title>Master Stove - Demo</title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link rel="icon" href="Images/favicon.png">
+    <!-- CSS -->
+    <link href="Styles/reset.css" rel="stylesheet" type="text/css" />
+    <link href="Styles/font-awesome.css" rel="stylesheet" />
+    <link href="Styles/myStyle.css" rel="stylesheet" type="text/css" />
+    <!-- Scripts -->
+    <script src="jScripts/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="jScripts/annyang.min.js"></script>
+    <script src="jScripts/Dragend.js"></script>
+    <script src="jScripts/JavaScript.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <div id="container">
+        <div id="StatusLine"><span class="CurrentTime"></span></div>
+        <div id="alert"></div>
+        <div id="phoneScreen">
+            <div id="googleSearch"></div>
+            <div id="timeAndDate">
+                <div class="CurrentTime"></div>
+                <span id="CurrentDate"></span>
+            </div>
+            <div class="middllePhoneIcon">
+                <div class="Icon" id="camara"><div class="appMName">Camera</div></div>
+                <div class="Icon" id="gallery"><div class="appMName">Gallery</div></div>
+                <div class="Icon" id="MasterStove"><div class="appMName">Master Stove</div></div>
+            </div>
+            <div class="middllePhoneIcon">
+                <div class="Icon" id="googleFolder"><div class="appMName">Google</div></div>
+                <div class="Icon" id="googlePlay"><div class="appMName">Google Play</div></div>
+                <div class="Icon" id="settings"><div class="appMName">Settings</div></div>
+            </div>
+            <div id="dots">
+                <div class="dot active"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+            <div id="BottomPhoneIcon">
+                <div class="Icon" id="phone"></div>
+                <div class="Icon" id="people"></div>
+                <div class="Icon" id="allApps"></div>
+                <div class="Icon" id="chrome"></div>
+                <div class="Icon" id="messages"></div>
+            </div>
+        </div>
+        <div id="appScreen">
+            <div id="firstTime">
+                <div id="page1">
+                    <img id="logo" src="Images/logo.svg" />
+                    <h1>Master Stove</h1>
+                    <p>Cook, share, get better</p>
+                    <div id="GetStarted" class="btn">Get started</div>
+                </div>
+                <div class="skip"> Skip </div>
+                <div id="dragendFirstTime">
+                    <div id="about" class="Firstdragend-page">
+
+                        <img src="Images/logo.svg" /><h1>Master Stove</h1>
+                        <p>With this app you can:</p>
+                        <ul>
+                            <li>Control your oven and stove</li>
+                            <li>Get their status (heat, time and image)</li>
+                            <li>Share with friends your cooking skills</li>
+                        </ul>
+                        <span class="fa-Stove-top"></span>
+                        <span class="fa-Oven"></span>
+                        <span class="fa-shareIcon"></span>
+                    </div>
+                    <div class="Firstdragend-page">
+                        <div id="HomePageAbout" class="AboutCapture">
+                            <p><strong>Home page</strong> - In this page you can always see your stove top and oven status</p>
+                            <img class="Capture" src="Images/homepageCapture.PNG" />
+                        </div>
+                    </div>
+                    <div class="Firstdragend-page">
+                        <div id="StoveTopAbout" class="AboutCapture">
+                            <p><strong>Stove Top</strong> - In this page you can see and change your stove top settings</p>
+                            <img class="Capture" src="Images/StoveTopCapture.PNG" />
+                        </div>
+                    </div>
+                    <div class="Firstdragend-page">
+                        <div id="OvenAbout" class="AboutCapture">
+                            <p><strong>Oven</strong> - In this page you can see and change your oven settings , get image of your meal and share it with friends</p>
+                            <img class="Capture" src="Images/OvenCapture.PNG" />
+                        </div>
+                    </div>
+                    <div class="Firstdragend-page">
+                        <div id="ShareAbout" class="AboutCapture">
+                            <p>With <strong> sharing </strong> your meal images you can consult your friends and improve your cooking skills</p>
+                            <img class="Capture" src="Images/ShareCapture.PNG" />
+                        </div>
+                    </div>
+                </div>
+                <div id="dots">
+                    <div id="page2" class="dot active"></div>
+                    <div id="page3" class="dot"></div>
+                    <div id="page4" class="dot"></div>
+                    <div id="page5" class="dot"></div>
+                    <div id="page6" class="dot"></div>
+                </div>
+            </div>
+            <div id="appTop">
+                <div id="appStatus">
+                    <span id="humburger"><i class="fa fa-bars" aria-hidden="true"></i></span>
+                    <span id="Search"><i class="fa fa-search" aria-hidden="true"></i></span>
+                    <h1 id="MasterStoveName">Master Stove</h1>
+                </div>
+                <nav id="humburgerMenu">
+                    <ul>
+                        <li data-page="1"><i class="fa fa-home" aria-hidden="true"></i>Home</li>
+                        <li data-page="2"><span class="fa-Stove-top"></span>Stove Top</li>
+                        <li data-page="3"><span class="fa-Oven"></span>Oven</li>
+                        <li data-page="4"><i class="fa fa-lightbulb-o" aria-hidden="true"></i>Tips</li>
+                        <li data-page="humburgerSetting"><i class="fa fa-cog" aria-hidden="true"></i>Settings</li>
+                        <li data-page="humburgerHelp"><i class="fa fa-question-circle" aria-hidden="true"></i>Help</li>
+                        <li data-page="humburgerAbout"><i class="fa fa-info-circle" aria-hidden="true"></i>About</li>
+                    </ul>
+                </nav>
+                <nav id="menu">
+                    <ul class="nav">
+                        <li data-page="1" class="active">Home<span></span></li>
+                        <li data-page="2" class="">Stove Top<span></span></li>
+                        <li data-page="3" class="">Oven<span></span></li>
+                        <li data-page="4" class="">Tips<span></span></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="demo">
+                <div class="dragend-page">
+                    <div id="HomePage">
+                        <ul id="stoveTop">
+                            <li id="TopLeft" class="Top Left"><span>Empty</span></li>
+                            <li id="TopRight" class="Top Right"><span>Empty</span></li>
+                            <li id="BottomLeft" class="Bottom Left"><span>Empty</span></li>
+                            <li id="BottomRight" class="Bottom Right"><span>Empty</span></li>
+                        </ul>
+                        <div id="OvenDetails">
+                            <div id="HomeOvenDetails">
+                                <div id="HomeFoodName"></div>
+                                <div id="HomeOvenTemp"></div>
+                                <div id="HomeOvenTimeLeft"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dragend-page">
+                    <ul id="stoveTop">
+                        <li id="TopLeft" class="Top Left"><span>Empty</span><div class="AddStoveTop"><i class="fa fa-pencil" aria-hidden="true"></i></div><div class="noEmptyIcons"></div></li>
+                        <li id="TopRight" class="Top Right"><span>Empty</span><div class="AddStoveTop"><i class="fa fa-pencil" aria-hidden="true"></i></div><div class="noEmptyIcons"></div></li>
+                        <li id="BottomLeft" class="Bottom Left"><span>Empty</span><div class="AddStoveTop"><i class="fa fa-pencil" aria-hidden="true"></i></div><div class="noEmptyIcons"></div></li>
+                        <li id="BottomRight" class="Bottom Right"><span>Empty</span><div class="AddStoveTop"><i class="fa fa-pencil" aria-hidden="true"></i></div><div class="noEmptyIcons"></div></li>
+                    </ul>
+                    <div id="stoveTopSetup">
+                        <i class="fa fa-window-close" aria-hidden="true"></i>
+                        <h3>Stove Top Settings</h3>
+                        <ul id="stoveTopSetupShowPlace">
+                            <li id="TopLeftS" class="Top Left"></li>
+                            <li id="TopRightS" class="Top Right"></li>
+                            <li id="BottomLeftS" class="Bottom Left"></li>
+                            <li id="BottomRightS" class="Bottom Right"></li>
+                        </ul>
+                        <label for="StoveFoodNameInput">
+                            Food Name:
+                            <input id="StoveFoodNameInput" type="text" />
+                        </label>
+                        <label for="stoveHeatLevelInput">
+                            Heat level:
+                            <input id="stoveHeatLevelInput" type="range" min="100" max="200" value="100" />
+                            <span>Low</span>      <span>Medium</span>         <span>High</span>
+                        </label>
+
+                        <div id="AddTime">
+
+                            <div id="stoveTimeLimit">
+                                Time limit: <i class="fa fa-toggle-off" aria-hidden="true"></i>
+                            </div>
+                            <label for="stoveTimeInput">
+                                Time:
+                                <input id="stoveTimeInput" type="number" min="1" max="60" value="1" /><span> Minuts</span>
+                            </label>
+                        </div>
+                        <div id="StoveTopOK" class="btn">OK</div>
+                    </div>
+                </div>
+                <div class="dragend-page" id="OvenPage">
+                    <div id="ovenFunc">
+                        <span id="Func11" class="Func active"></span>
+                        <span id="Func1" class="Func"></span>
+                        <span id="Func2" class="Func"></span>
+                        <span id="Func3" class="Func"></span>
+                        <span id="Func4" class="Func"></span>
+                        <span id="Func5" class="Func"></span>
+                        <span id="Func6" class="Func"></span>
+                        <span id="Func7" class="Func"></span>
+                        <span id="Func8" class="Func"></span>
+                        <span id="Func12" class="Func"></span>
+                        <span id="Func9" class="Func"></span>
+                        <span id="Func10" class="Func"></span>
+
+                    </div>
+
+                    <div id="FuncDetails">
+                        <i class="fa fa-window-close" aria-hidden="true"></i>
+
+                        <div id="DFunc11">
+                            <h3><span id="DFuncImage11" class="Func"></span>Turn-off</h3>
+                        </div>
+                        <div id="DFunc1">
+
+                            <h3><span id="DFuncImage1" class="Func"></span>4D hot air</h3>
+                            <p>30-275 C°</p>
+                            <p>
+                                For baking and roasting on one or more levels. <br />
+                                The fan distributes heat from the ring heating element in the back panel evenly
+                                around the cooking compartment.
+                            </p>
+                        </div>
+                        <div id="DFunc2">
+                            <h3><span id="DFuncImage2" class="Func"></span>Top/bottom heating</h3>
+                            <p>30-300 °C</p>
+                            <p>For traditional baking and roasting on one level.
+                            Especially suitable for cakes with moist toppings.
+                            Heat is emitted evenly from the top and bottom.</p>
+                        </div>
+                        <div id="DFunc3">
+                            <h3><span id="DFuncImage3" class="Func"></span>Hot air eco</h3>
+                            <p>30-275 °C</p>
+                            <p>
+                                For energy-optimised cooking of selected dishes on one level without preheating.
+                                The fan distributes the energy-optimised heat from the ring heating element in the
+                                back wall evenly around the cooking compartment.
+                            </p>
+                        </div>
+                        <div id="DFunc9">
+                            <h3><span id="DFuncImage9" class="Func"></span>Defrosting</h3>
+                            <p>30-60 C°</p>
+                            <p>For gently defrosting frozen food.</p>
+                        </div>
+                        <span id="changeFunc" class="btn">Change to this function</span>
+                    </div>
+                    <div id="OvenDetails">
+                        <div id="FoodName"></div>
+                        <div id="OvenTemp"></div>
+                        <div id="OvenTimeLeft"></div>
+                    </div>
+                    <div id="OvenSetupBtn" class="btn">Setup</div>
+                    <div id="GetImageBtn" class="btn">Get Image</div>
+                    <div id="GetImage">
+                        <i class="fa fa-window-close" aria-hidden="true"></i>
+                        <h3>Get Oven Image</h3>
+                        <img id="placeHolder" />
+                        <div id="ImageTop" class="btn">Above</div>
+                        <div id="ImageFront" class="btn">Front</div>
+                        <div id="ImageLeft" class="btn">Left</div>
+                        <div id="ImageRight" class="btn">Right</div>
+                        <div id="Share" class="btn">Share Image</div>
+                    </div>
+                    <div id="OvenSetup">
+                        <i class="fa fa-window-close" aria-hidden="true"></i>
+                        <h3>Setup Progrem</h3>
+                        <label for="FoodNameInput">
+                            Food Name:
+                            <input id="FoodNameInput" type="text" />
+                        </label>
+                        <div id="AddLevel">
+                            <span><i class="fa fa-plus-circle" aria-hidden="true"></i>Add Heat Level & Time</span>
+                            <div id="StepControl">
+                                <label for="HeatLevelInput">
+                                    Heat level:
+                                    <input id="HeatLevelInput" type="number" min="100" max="250" value="180" /><span class="temp">°</span>
+                                </label>
+                                <div id="TimeLimit">
+                                    Time limit: <i class="fa fa-toggle-off" aria-hidden="true"></i>
+                                </div>
+                                <label for="TimeInput">
+                                    Time:
+                                    <input id="TimeInput" type="number" min="1" max="60" value="1" /><span> Minuts</span>
+                                </label>
+                                <div id="AddStep" class="btn">Add Step</div>
+                            </div>
+                        </div>
+                        <div id="FoodSteps">
+                            <ol></ol>
+                        </div>
+                        <div id="OK" class="btn">OK</div>
+                    </div>
+
+                </div>
+                <div class="dragend-page">
+                    <div id="TipsPage">
+                        <div id="tipsTitle">
+                            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
+                            <h2>Tips</h2>
+                        </div>
+                        <ul>
+                            <li>Use pans with low sides. Light colored aluminum is ideal for baking and for roasting vegetables—even when not using convection. It helps prevent the bottoms of cookies and breads from overbrowning, and the natural sugars in vegetables from burning. With a dark pan, heat transfer is accelerated and food can darken faster.</li>
+                            <li>Add water. Place a pan filled with an inch of simmering water on the oven floor before baking artisan breads, which are usually baked at a very high heat. The steam helps create a crispy, crackly crust.</li>
+                            <li>How to roast. Try dry brining and refrigerating meat and chicken for at least an hour before roasting with convection. This dries the poultry skin or the outside of the meat and helps form a seal in the oven more quickly, keeping it moist.</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div id="humburgerSetting" class="humburgerPage">
+                <i class="fa fa-window-close" aria-hidden="true"></i>
+                <h2>Setting</h2>
+            </div>
+            <div id="humburgerHelp" class="humburgerPage">
+                <i class="fa fa-window-close" aria-hidden="true"></i>
+                <h2>Help</h2>
+            </div>
+            <div id="humburgerAbout" class="humburgerPage">
+                <i class="fa fa-window-close" aria-hidden="true"></i>
+                <div id="AboutTheAppWindows">
+                    <h1>Master Stove</h1>
+                    <p>version 3.17.197</p>
+                    <img src="Images/logo.svg" />
+                    <p>© 2017 Master Stove Inc. <br /> All rights reserved</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="controlButton">
+            <span id="back"></span>
+        </div>
+    </div>
+
+</body>
+</html>
