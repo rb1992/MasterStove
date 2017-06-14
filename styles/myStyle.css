@@ -1,4 +1,4 @@
-﻿body {
+body {
     background-color: #c22048;
 }
 
@@ -223,7 +223,7 @@ section {
     }
     section p{
          padding-bottom:30px;
-        direction: rtl;
+         direction:rtl;
     }
 
 
@@ -233,6 +233,7 @@ section {
 #container form * {
     font-size: 11pt;
     font-weight: normal;
+    direction:rtl;
 }
 
 .form-control:focus {
@@ -245,6 +246,7 @@ section {
 #container form label ,#container form input[type="submit"] {
     font-size: 12pt;
     font-weight: bold;
+        float: right;
 }
 
 #container form input[type="submit"]{
