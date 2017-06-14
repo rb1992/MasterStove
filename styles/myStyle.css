@@ -223,6 +223,7 @@ section {
     }
     section p{
          padding-bottom:30px;
+        direction: rtl;
     }
 
 
